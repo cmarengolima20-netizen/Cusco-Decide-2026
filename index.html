@@ -101,6 +101,23 @@
             justify-content: space-between;
             align-items: center;
         }
+        96  .nav-container {
+97      max-width: 1280px;
+98      margin: 0 auto;
+99      padding: 1rem 2rem;
+100     display: flex;
+101     justify-content: space-between;
+102     align-items: center; /* Puede que tengas otra línea aquí */
+103 }
+104 
+105 @media (max-width: 768px) {
+106   .nav-container {
+107     flex-direction: column;
+108     text-align: center;
+109     gap: 15px;
+110   }
+111 }
+
 
         .logo-area {
             display: flex;
