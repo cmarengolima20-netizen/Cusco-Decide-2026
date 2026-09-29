@@ -101,23 +101,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        96  .nav-container {
-97      max-width: 1280px;
-98      margin: 0 auto;
-99      padding: 1rem 2rem;
-100     display: flex;
-101     justify-content: space-between;
-102     align-items: center; /* Puede que tengas otra línea aquí */
-103 }
-104 
-105 @media (max-width: 768px) {
-106   .nav-container {
-107     flex-direction: column;
-108     text-align: center;
-109     gap: 15px;
-110   }
-111 }
-
 
         .logo-area {
             display: flex;
@@ -249,12 +232,12 @@
         }
 
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 1s ease;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        animation: fadeInUp 1s ease;
+    }
 
         .stat-card {
             background: var(--surface);
@@ -307,11 +290,11 @@
         }
 
         .charts-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
 
         .chart-card {
             background: var(--surface);
@@ -528,11 +511,11 @@
         }
 
         .candidates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
 
         .candidate-card {
             background: var(--surface);
@@ -930,7 +913,36 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
+/* --- CÓDIGO PARA ADAPTAR EL MENÚ Y TÍTULO EN CELULARES --- */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                text-align: center;
+            }
 
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+        /* ----------------------------------------------------- */
+@media (max-width: 768px) {
+    .chart-wrapper {
+        height: 320px; /* Aumentamos un poquito la altura en celular para que la leyenda de 13 provincias respire mejor */
+    }
+}
         .no-results {
             grid-column: 1 / -1;
             text-align: center;
@@ -1160,7 +1172,7 @@
     "id": 1,
     "name": "Luis Ángel Aragón Carreño",
     "party": "Acción Popular",
-    "logo": "https://share.google/kScOuabV3A0lQ4Mjt",
+    "logo": "https://th.bing.com/th/id/R.e42e37fd0666b7d450170e5bc0f7566f?rik=Qm%2bwEslNcEd6ag&pid=ImgRaw&r=0",
     "color": "#dc2626",
     "bgColor": "#fef2f2",
     "borderColor": "rgba(220, 38, 38, 0.2)",
@@ -1701,7 +1713,6 @@
         <!-- Aquí están tus candidatos -->
     </div>
 
-    <!-- ⬇️ PEGA EL BOTÓN AQUí, JUSTO ANTES DE QUE CIERRE EL BODY ⬇️ -->
     <div style="text-align: center; padding: 25px; margin-top: 20px; background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-radius: 0 0 12px 12px;">
         <p style="color: #475569; font-size: 15px; margin-bottom: 15px; font-family: sans-serif;">
             ¿Deseas profundizar en las propuestas, hojas de vida y planes de gobierno oficiales?
